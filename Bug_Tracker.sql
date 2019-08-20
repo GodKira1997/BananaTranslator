@@ -1,7 +1,7 @@
 
 Create table Role(role_id int not null GENERATED ALWAYS AS IDENTITY primary key, role_name varchar(20) not null unique);
 
-Create table Users(user_id int not null GENERATED ALWAYS AS IDENTITY primary key, user_name varchar(20) not null, email varchar(30) not null, password varchar(20) ,role_id int , available int not null,last_login datetime,FOREIGN KEY (role_id) REFERENCES Role(role_id));
+Create table Users(user_id int not null GENERATED ALWAYS AS IDENTITY primary key, user_name varchar(20) not null, email varchar(30) not null, password varchar(20) ,role_id int , available int not null,last_login timestamp,FOREIGN KEY (role_id) REFERENCES Role(role_id));
 
 
 Create table Project(prj_id int not null GENERATED ALWAYS AS IDENTITY primary key, prj_name varchar(30) not null unique, description varchar(250), start_date date not null,status varchar(15) not null);
