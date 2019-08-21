@@ -9,7 +9,8 @@ public interface UserDAO {
 	void createRole();
 	void createUser();
 	void addUser(String email,String name,String roleName);
-	void setPassword(String email,String roleName,String password);
+	boolean setPassword(String email,String roleName,String password);
+	boolean checkUser(String email);
 	User getUser(String email);
 	User getUser(int userId);
 	List<User> getAllUsers(String roleName);
