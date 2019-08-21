@@ -1,12 +1,13 @@
 package com.hsbc.bts.models;
 
 public class User {
+	private int userId;
 	private String email;
 	private String name;
 	private String password;
 	private int available;
 	private Role role;
-	private String timestamp;
+	private String lastLogin;
 	
 	public User() {
 		super();
@@ -19,16 +20,17 @@ public class User {
 		this.available = available;
 		this.role = role;
 		this.password = null;
-		this.timestamp = null;
+		this.lastLogin = null;
 	}
 
-	public User(String email, String name, int available, Role role, String timestamp) {
+	public User(int userID,String email, String name, int available, Role role, String lastLogin) {
 		super();
+		this.userId = userID;
 		this.email = email;
 		this.name = name;
 		this.available = available;
 		this.role = role;
-		this.timestamp = timestamp;
+		this.lastLogin = lastLogin;
 	}
 
 	public String getEmail() {
@@ -67,14 +69,14 @@ public class User {
 		this.password = password;
 	}
 
-	public String getTimestamp() {
-		return timestamp;
+	public String getLastLogin() {
+		return lastLogin;
 	}
 
 	@Override
 	public String toString() {
 		return "User [email=" + email + ", name=" + name + ", available=" + available + ", role=" + role
-				+ ", timestamp=" + timestamp + "]";
+				+ ", lastLogin=" + lastLogin + "]";
 	}
 	
 }
