@@ -1,5 +1,5 @@
 package com.hsbc.bts.services;
 
 public interface ImportService {
-	void addUsers(String path);
+	void importUsers(String path);
 }
